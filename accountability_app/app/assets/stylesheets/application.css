@@ -15,27 +15,16 @@
  *= require bootstrap-3.2.0.min.css
  */
 
-/*
-.row {
-	padding-top: 15em;
-}
-#bottom_footer{
-	background:#BACBD9;
-
-}
  
-#about_us {
- 	
- 	margin-top: 10em;
+ .footer{
+ 	padding-top:10px;
  	font-family: 'Lato', sans-serif;
- 	width:100%;
+ 	background: #BACBD9;
  }
 
- #github_url {
- 	font-size: 10px;
+ #text-muted {
+ 	size: 1px;
  }
-*/
-=======
 .flag {
   border: 2px solid black;
 }
@@ -66,5 +55,4 @@
  .senator_bills_container {
   padding-top: 10px;
  }
->>>>>>> dev
 

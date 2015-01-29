@@ -90,10 +90,11 @@
   </script>
 
   <script>
-  window.onload = function(){
+
+  $(document).ready(function() {
     var ctx = document.getElementById("campaign_chart").getContext("2d");
     window.myBar = new Chart(ctx).Bar(barChartData);
-   }
+  });
 
   var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
   var totalDollar = []; 
@@ -108,13 +109,8 @@
         highlightStroke: "rgba(220,220,220,1)",
         data : [18,17.5,12.4,8.5,7.3,6.6,6.4]
       }
-
   ]
 };
-
-var myBarChart = new Chart(ctx).Bar(data, options);
-  
-
-  </script>
+</script>
 
 
