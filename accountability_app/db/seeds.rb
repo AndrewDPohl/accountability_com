@@ -35,3 +35,63 @@ response = Typhoeus.get(
             osid: senator["person"]["osid"],
             bioguideid: senator["person"]["bioguideid"]})
     end
+
+    hash_state = {
+      "AL"  =>  "Alabama",
+      "AK"  =>  "Alaska",
+      "AZ"  =>  "Arizona",
+      "AR"  =>  "Arkansas",
+      "CA"  =>  "California",
+      "CO"  =>  "Colorado",
+      "CT"  =>  "Connecticut",
+      "DE"  =>  "Delaware",
+      "FL"  =>  "Florida",
+      "GA"  =>  "Georgia",
+      "HI"  =>  "Hawaii",
+      "ID"  =>  "Idaho",
+      "IL"  =>  "Illinois",
+      "IN"  =>  "Indiana",
+      "IA"  =>  "Iowa",
+      "KS"  =>  "Kansas",
+      "KY"  =>  "Kentucky",
+      "LA"  =>  "Louisiana",
+      "ME"  =>  "Maine",
+      "MD"  =>  "Maryland",
+      "MA"  =>  "Massachusetts",
+      "MI"  =>  "Michigan",
+      "MN"  =>  "Minnesota",
+      "MS"  =>  "Mississippi",
+      "MO"  =>  "Missouri",
+      "MT"  =>  "Montana",
+      "NE"  =>  "Nebraska",
+      "NV"  =>  "Nevada",
+      "NH"  =>  "New%20Hampshire",
+      "NJ"  =>  "New%20Jersey",
+      "NM"  =>  "New%20Mexico",
+      "NY"  =>  "New%20York",
+      "NC"  =>  "North%20Carolina",
+      "ND"  =>  "North%20Dakota",
+      "OH"  =>  "Ohio",
+      "OK"  =>  "Oklahoma",
+      "OR"  =>  "Oregon",
+      "PA"  =>  "Pennsylvania",
+      "RI"  =>  "Rhode%20Island",
+      "SC"  =>  "South%20Carolina",
+      "SD"  =>  "South%20Dakota",
+      "TN"  =>  "Tennessee",
+      "TX"  =>  "Texas",
+      "UT"  =>  "Utah",
+      "VT"  =>  "Vermont",
+      "VA"  =>  "Virginia",
+      "WA"  =>  "Washington",
+      "WV"  =>  "West%20Virginia",
+      "WI"  =>  "Wisconsin",
+      "WY"  =>  "Wyoming" 
+    }
+
+    Senator.all.each do |senator|
+        sen_state = hash_state[senator[:state]]
+        senator[:full_state_name] = sen_state
+        p senator
+        senator.save!
+    end

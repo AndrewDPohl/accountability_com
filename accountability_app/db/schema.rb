@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128014312) do
+ActiveRecord::Schema.define(version: 20150129185931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 20150128014312) do
     t.json     "latest_bills"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-  end
-
-  create_table "campaigns", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "senators", force: :cascade do |t|
@@ -50,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150128014312) do
     t.datetime "updated_at",      null: false
     t.string   "bioguideid"
     t.integer  "watchlist_id"
+    t.string   "full_state_name"
   end
 
   create_table "users", force: :cascade do |t|
