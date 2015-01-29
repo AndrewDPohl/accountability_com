@@ -1,4 +1,125 @@
 <div class="container">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script>
+  $(function() {
+    var availableSenators = [
+    "Barbara Boxer",
+    "Barbara Mikulski",
+    "Lisa  Murkowski",
+    "Patty Murray",
+    "Kelly Ayotte",
+    "Deb Fischer",
+    "Heidi Heitkamp",
+    "Elizabeth Warren",
+    "Claire  McCaskill",
+    "Amy Klobuchar",
+    "Kirsten Gillibrand",
+    "Mazie Hirono",
+    "Debbie  Stabenow",
+    "Dianne  Feinstein",
+    "Maria Cantwell",
+    "Tammy Baldwin",
+    "Susan Collins",
+    "Shelley Capito",
+    "Jeanne  Shaheen",
+    "Joni  Ernst",
+    "Roy Blunt",
+    "John  Boozman",
+    "Richard Burr",
+    "John  Isakson",
+    "Mark  Kirk",
+    "Jerry Moran",
+    "Robert  Portman",
+    "Patrick Toomey",
+    "David Vitter",
+    "Michael Crapo",
+    "Charles Grassley",
+    "Patrick Leahy",
+    "John  McCain",
+    "Harry Reid",
+    "Charles Schumer",
+    "Richard Shelby",
+    "Ron Wyden",
+    "John  Thune",
+    "Lamar Alexander",
+    "Daniel  Coats",
+    "Michael Bennet",
+    "Richard Blumenthal",
+    "Marco Rubio",
+    "Rand  Paul",
+    "John  Hoeven",
+    "Mike  Lee",
+    "Ron Johnson",
+    "Roger Wicker",
+    "Timothy Kaine",
+    "Ted Cruz",
+    "Angus King",
+    "Joe Manchin",
+    "Martin  Heinrich",
+    "John  Barrasso",
+    "Bob Corker",
+    "Sheldon Whitehouse",
+    "Robert  Casey",
+    "Jon Tester",
+    "Dean  Heller",
+    "Joe Donnelly",
+    "Christopher Murphy",
+    "Bill  Nelson",
+    "Orrin Hatch",
+    "Thomas  Carper",
+    "Bernard Sanders",
+    "Robert  Menéndez",
+    "Jeff  Flake",
+    "Benjamin  Cardin",
+    "Sherrod Brown",
+    "Thad  Cochran",
+    "John  Cornyn",
+    "Richard Durbin",
+    "Michael Enzi",
+    "Lindsey Graham",
+    "James Inhofe",
+    "Mitch McConnell",
+    "John  Reed",
+    "Pat Roberts",
+    "Jefferson Sessions",
+    "Edward  Markey",
+    "Tom Udall",
+    "Bill  Cassidy",
+    "Gary  Peters",
+    "Benjamin  Sasse",
+    "Mark  Warner",
+    "James Risch",
+    "Jeff  Merkley",
+    "Alan  Franken",
+    "Chris Coons",
+    "Cory  Gardner",
+    "James Lankford",
+    "Tim Scott",
+    "Brian Schatz",
+    "Tom Cotton",
+    "Steve Daines",
+    "Cory  Booker",
+    "Dan Sullivan",
+    "David Perdue",
+    "Thom  Tillis",
+    "Mike  Rounds"
+    ];
+    $( "#senators" ).autocomplete({
+      source: availableSenators
+    });
+  });
+  </script>
+ 
+<div class="form-group">
+  <%= form_for :senator, url: "/search", method: :get do |f| %>
+    <label for="senators">Choose A Senator: </label>
+    <input id="senators" name="senator_name">
+  <% end %>
+
+</div>
 
 <div class='senator container'>
   <h1>Find your senator</h1>
