@@ -11,10 +11,28 @@ class Bill < ActiveRecord::Base
         number: bills["number"],
         introduced_date: bills["introduced_date"],
         committees:bills["committees"],
-        latest_action_date:bills["latest_action_date"],
+        latest_major_action_date:bills["latest_major_action_date"],
         latest_major_action:bills["latest_major_action"]
       }
     end
-  end   
+  end  
+
+  def self.passed_bills
+    response1 = Typhoeus.get(ENV['PASSED_BILLS']) 
+    passed_bill_data = JSON.parse(response1.body)
+
+    passed_bills = passed_bill_data["results"][0]["bills"]
+
+    passed_bills.map do |passed_bills|
+      {
+        title: passed_bills["title"],
+        number: passed_bills["number"],
+        introduced_date: passed_bills["introduced_date"],
+        latest_major_action_date: passed_bills["latest_major_action_date"],
+        latest_major_action: passed_bills["latest_major_action"]
+      }
+    end
+  end
+
 
 end

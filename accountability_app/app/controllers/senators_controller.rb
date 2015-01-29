@@ -6,6 +6,7 @@ class SenatorsController < ApplicationController
 
   def show
     @senator = Senator.find(params[:id])
+    @votes = @senator.showvotes
     render :show
   end
 

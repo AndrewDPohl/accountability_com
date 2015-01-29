@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       login user
       redirect_to profile_path
     else
+      flash[:error] = "Failed To Create Account.  Please verify that password is at least 8 characters long with upper and lowercase letters"
       redirect_to sign_up_path
     end
   end

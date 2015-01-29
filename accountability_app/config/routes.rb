@@ -37,9 +37,13 @@ Rails.application.routes.draw do
 
   get 'bills', to: 'bills#index'
 
+
+  get 'bills/passed_bills', to: 'bills#passed_bills'
+
   get 'watchlist', to: 'watchlists#index'
 
   post '/watchlists', to: 'watchlists#add'
+
 
 
 end

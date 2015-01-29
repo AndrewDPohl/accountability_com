@@ -4,5 +4,5 @@
 <br>
 
 <% @watchlist.senators.each do |senator| %>
-  <div><h3><%= senator.first_name %> <%= senator.last_name %></h3></div>
+  <div><h3><%= link_to senator.first_name + " " + senator.last_name, senator_path(senator) %></h3></div>
 <% end %>

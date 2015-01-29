@@ -3,4 +3,8 @@ class BillsController < ApplicationController
     @bills = Bill.showbills
   end
 
+  def passed_bills
+    @passed_bills = Bill.passed_bills
+  end
+
 end

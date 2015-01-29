@@ -25,6 +25,34 @@
  #text-muted {
  	size: 1px;
  }
+.flag {
+  border: 2px solid black;
+}
 
+.ytd_stats {
+  background-color: #2B5992;
+  color: white;
+  width: 450px;
+  text-align: center;
+  border-radius: 10px;
+}
 
+.ytd_stat {
+  color: #2B5992;
+  width: 425;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.stat {
+  text-align: center;
+}
+ .senator_vote_container {
+  padding-top: 10px;
+ }
+
+ .senator_bills_container {
+  padding-top: 10px;
+ }
 
