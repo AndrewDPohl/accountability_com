@@ -12,25 +12,25 @@
     <%= image_tag("senate_seats02.png") %>
   </div>
   
-<div class="container" id= "charts">
-    <div class="container_pie">
+<!-- <div class="container" id= "charts">
+    <div class="container_pie col-sm-6">
         <canvas id="canvas" height="425" width="600"></canvas>
       </div>
-      <div class="container_bar">
+      <div class="container_bar col-sm-6">
         <h3> 2014 Campaign Financing Chart In Millions </h3>
         <canvas id="campaign_chart" height="450" width="600" ></canvas>
     </div>
-</div>
+</div> -->
 
 <!-- resposive -->
-  <!--   <div class="canvas" style="top:400";>
+    <div class="canvas" style="top:400";>
         <canvas id="canvas" height="425" width="600"></canvas>
       </div>
       <div class="campaign_chart">
         <h3 class="noBoot"> 2014 Campaign Financing Chart In Millions </h3>
         <canvas id="campaign_chart" height="450" width="600" ></canvas>
     </div>
-</div> -->
+</div>
 
 
 
@@ -89,11 +89,19 @@
 
   </script>
 
+  
   <script>
-  window.onload = function(){
-    var ctx = document.getElementById("campaign_chart").getContext("2d");
-    window.myBar = new Chart(ctx).Bar(barChartData);
-   }
+
+  // $(document).ready(function() {
+  //   var ctx = document.getElementById("campaign_chart").getContext("2d");
+  //   window.myBar = new Chart(ctx).Bar(barChartData);
+  // });
+
+  
+(function() {
+
+  var ctx2 = document.getElementById("campaign_chart").getContext("2d");
+
 
   var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
   var totalDollar = []; 
@@ -108,13 +116,14 @@
         highlightStroke: "rgba(220,220,220,1)",
         data : [18,17.5,12.4,8.5,7.3,6.6,6.4]
       }
-
   ]
+
 };
 
-var myBarChart = new Chart(ctx).Bar(data, options);
-  
+var myBarChart = new Chart(ctx2).Bar(barChartData);
 
-  </script>
+})();
+
+</script>
 
 

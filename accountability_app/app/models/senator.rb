@@ -28,7 +28,7 @@ class Senator < ActiveRecord::Base
   end
 
   def showstate
-    senstate = "https://raw.githubusercontent.com/TheJasonHorsley/state-map/master/stateImages/California.png"
+    senstate = "https://raw.githubusercontent.com/TheJasonHorsley/state-map/master/stateImages/#{full_state_name}.png"
   end
 
 
