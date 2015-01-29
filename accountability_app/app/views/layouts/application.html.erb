@@ -4,6 +4,7 @@
   <title>accountablity</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'autocomplete-rails.js' %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
@@ -52,12 +53,17 @@
 </nav>
 <!-- End of Navigation -->
 
+<div class="alert_message">
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+</div>
 <%= yield %>
 
 
 </div>
 
-<<<<<<< HEAD
+
 <!-- End of FOOTER -->
 <footer>
 <div id="container">

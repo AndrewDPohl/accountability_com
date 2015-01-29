@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :users, except: [:new]
 
+  get "/search", to: "senators#search"
   get "/sign_up", to: "users#new"
   get "/profile", to: "users#profile"
   get "/login", to: "sessions#new"
