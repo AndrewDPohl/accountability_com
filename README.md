@@ -10,7 +10,7 @@
 
 
 #<h2>MVP</h2>
-<p>Create a site which will render current Senators in the US Congress using GovTrack.us and Sunlightlabs APIs. Users will be able to create accounts and save senators to "watch lists" to follow their careers.</p>
+<p>Create a site which will render current Senators in the US Congress using GovTrack.us, New Tork Times Congress, and Sunlightlabs APIs. Users will be able to create accounts and save senators to "watch lists" to follow their careers.</p>
 
 <p>Information for each Senator will include first and last name, birthday, gender, political party, job title, state they represent, senator rank, phone, start date, end date, website, govtrack link, twitter handle and YouTube id.</p>
 
