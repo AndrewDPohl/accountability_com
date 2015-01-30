@@ -1,0 +1,17 @@
+<div class="container">
+
+<h1>Watchlist</h1>
+<br>
+
+<% @watchlist.senators.each do |senator| %>
+  <div><h2><%= link_to senator.first_name + " " + senator.last_name, senator_path(senator) %></h2></div>
+<% end %>
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+
+
+</div>

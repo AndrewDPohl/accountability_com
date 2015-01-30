@@ -1,0 +1,73 @@
+<div class='container'>
+  
+  <div class="row">
+    <div class='senator_container col-sm-5'>
+      <img src="<%= @senator.showpics %>"/>
+    </div>
+    <div class='senator_container col-sm-5'>
+      <h1 class='senator_info_main'><%= @senator.first_name + " " + @senator.last_name%></h1>
+      <h2 class='senator_info'><%= @senator.political_party %></h2>
+      <br>
+      <h4 class='senator_info'>Job Title: <%= @senator.job_title %></h4>
+      <h4 class='senator_info'>Rank: <%= @senator.rank %></h4>
+      <h4 class='senator_info'>State: <%= @senator.state %></h4>
+      <h4 class='senator_info'>Gender: <%= @senator.gender %></h4>  
+      <h4 class='senator_info'>Birthdate: <%= @senator.date_of_birth %></h4>
+      <h4 class='senator_info'>Phone Number: <%= @senator.phone %></h4>
+      <h4 class='senator_info'>Start Date: <%= @senator.start_date %></h4>
+      <h4 class='senator_info'>End Date: <%= @senator.end_date %></h4>
+      <h4 class='senator_info'><a href="<%= @senator.website %>">Senator Website</a></h4>
+      <h4 class='senator_info'><a href="<%= @senator.link_to_gov %>">GovTrack Website</a></h4>
+      <h4 class='senator_info'><a href="https://twitter.com/<%= @senator.twitter_handle %>">Twitter</a></h4>
+      <h4 class='senator_info'><a href="https://www.youtube.com/<%= @senator.youtube_id %>">YouTube</a></h4>
+      <!-- <h4 class='senator_info'>CSPAN ID: <%= @senator.cspan_id %></h4> -->
+      <% if current_user %>
+        <div>
+        <br>
+      <%= button_to "Add to watchlist","/watchlists", params: {senator_id: @senator.id}, method: "post", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="senator_state_flag col-sm-2">
+      <img class="flag" src="<%=@senator.showflag %>"/>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <img class="showstate" src="<%= @senator.showstate %>"/>
+    </div>
+
+  </div><br>
+
+  <h2 class="ytd_stats">Year To Date Statistics</h2>
+
+  <div class="row">
+    <div class="senator_vote_container col-sm-4">
+      <% @votes.each do |vote| %>
+          <h4 class="ytd_stat">Most Recent Vote: <h1 class='stat'><%= vote[:most_recent_vote] %></h1></h4>
+    </div>
+    <div class="senator_vote_container col-sm-4">
+          <h4 class="ytd_stat">Missed Votes Percentage: <h1 class='stat'><%= vote[:missed_votes_pct] %>%</h1></h4>
+    </div>
+    <div class="senator_vote_container col-sm-4">
+          <h4 class="ytd_stat">Percentage of Votes With Party: <h1 class='stat'><%= vote[:votes_with_party_pct] %> %</h1></h4>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="senator_bills_container col-sm-4">
+      <% @votes.each do |vote| %>
+        <h4 class="ytd_stat">Number of Bills Sponsored: <h1 class='stat'><%= vote[:bills_sponsored] %></h1></h4>
+    </div>
+    <div class="senator_bills_container col-sm-4">
+        <h4 class="ytd_stat">Number of Bills Co-Sponsored: <h1 class='stat'><%= vote[:bills_cosponsored] %></h1></h4>
+      <% end %>
+    </div>
+  </div>
+  
+  <br>
+
+
+</div>

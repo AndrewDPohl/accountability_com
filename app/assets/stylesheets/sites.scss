@@ -1,0 +1,118 @@
+// Place all the styles related to the sites controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#index_banner{
+  height:20em;
+  width:100%;
+  background-color:#2B5992;
+  color:white;
+  margin-top: -20px;
+}
+
+.senator_name_index{
+  margin-top: 2em;
+}
+
+#banner_text{
+  font-family: 'Lato', sans-serif;
+  margin-left: 5em;
+  margin-right:5em;
+}
+
+p{
+  font-size: 1.5em;
+}
+
+#senate_graph{
+  margin-top:3em;
+}
+
+#about_banner{
+  height:8em;
+  width:100%;
+  background-color:#2B5992;
+  color:white;
+  margin-top: -20px;
+}
+
+#about_text{
+  font-family: 'Lato', sans-serif;
+  margin-left: 5em;
+  margin-right:5em;
+}
+
+
+#senator_container{
+ 
+}
+
+.republican, .republican a {
+  color:red;
+}
+
+
+.democrat, .democrat a {
+  color:blue;
+}
+
+.independent, .independent a {
+    color: #FFCC00;
+}
+/* #charts {
+    margin-top: 1em;
+    height:40em;
+    font-family: 'Lato', sans-serif;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .container_pie{
+    margin-top:5em;
+    margin-left:-3.5em;
+    margin-bottom: -5em;
+    padding-bottom: 8em;
+*/
+ /* }*/
+
+  .container_bar{
+    margin-left: 500px;
+    margin-top: -500px;
+    right: 100px;
+    margin-right: 150px;
+    padding-left: 50px;
+    padding-bottom: 8em;
+  }
+  
+  #canvas {
+    float: left;
+  }
+  
+  .campaign_chart {
+    float: left;
+  }
+
+  .bill_title {
+  text-align: left;
+  }
+
+footer {
+  margin-top: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+  
+
+  
+
+
+
+
+ 
+
+
+
+
+

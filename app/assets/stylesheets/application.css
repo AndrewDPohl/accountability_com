@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+*= require_tree .
+ *= require_self
+ *= require bootstrap-3.2.0.min.css
+ */
+/*.senator-form {
+  border: 2px solid black;
+  background-color: blue;
+}*/
+ 
+
+.flag {
+  border: 2px solid black;
+}
+
+.ytd_stats {
+  background-color: #2B5992;
+  color: white;
+  width: 450px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.ytd_stat {
+  color: #2B5992;
+  width: 425;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.stat {
+  text-align: center;
+}
+ .senator_vote_container {
+  padding-top: 10px;
+ }
+
+ .senator_bills_container {
+  padding-top: 10px;
+ }
+
+#disclosure {
+  padding-left: 100px;
+}

@@ -1,0 +1,126 @@
+<div id= "index_container"> 
+  <div id="index_banner" class= "index_bannerClass"> 
+    <div id="banner_text"> 
+      <br>  
+      <h1>Senator Accountablity Project </h1>
+      <P>The goal of this project is to provide current and relevant information on every member of the United States Senate. We provide up-to-date information on bills being passed through the Senate, as well as, voting records for each Senator. Our mission is to help voters be more informed.</p>
+    </div>
+  </div>
+
+  <div id="senate_graph" div align="center">
+    <%= image_tag("senate_seats02.png") %>
+  </div>
+
+<div class="container">
+<!-- resposive -->
+<div class="row">
+  <div class="senator_vote_container col-sm-6">
+    <div class="canvas" style="top:400";>
+        <h4 class="noBoot"> Men vs. Women Ratio </h4>
+        <canvas id="canvas" height="425" width="600"></canvas>
+    </div>
+  </div>
+  <div class="senator_vote_container col-sm-6">
+    <div class="campaign_chart">
+      <h4 class="noBoot"> 2014 Campaign Financing Chart In Millions </h4>
+      <canvas id="campaign_chart" height="450" width="600" ></canvas>    
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <script>
+
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var data = [
+    {   
+        value: 20,
+        color:"#325D90",
+        highlight: "#AAB7BF",
+        label: "women"
+    },
+    
+    {
+        value: 80,
+        color: "#325D90",
+        highlight: "#AAB7BF",
+        label: "men"
+    }
+  ]
+
+    var options = {
+        //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke : true,
+
+      //String - The colour of each segment stroke
+      segmentStrokeColor : "#fff",
+
+      //Number - The width of each segment stroke
+      segmentStrokeWidth : 2,
+
+      //Number - The percentage of the chart that we cut out of the middle
+      percentageInnerCutout : 50, // This is 0 for Pie charts
+
+      //Number - Amount of animation steps
+      animationSteps : 100,
+
+      //String - Animation easing effect
+      animationEasing : "easeOutBounce",
+
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate : true,
+
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale : false,
+
+    
+   }
+  
+
+  var male_female_chart = new Chart(ctx).Pie(data, options);
+
+
+  </script>
+
+  
+  <script>
+
+  // $(document).ready(function() {
+  //   var ctx = document.getElementById("campaign_chart").getContext("2d");
+  //   window.myBar = new Chart(ctx).Bar(barChartData);
+  // });
+
+  
+(function() {
+
+  var ctx2 = document.getElementById("campaign_chart").getContext("2d");
+
+
+  var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+  var totalDollar = []; 
+  var barChartData = {
+    labels : ["Edward Markey","Mitch Mcconnell", "Mark Warner","Mark Begich","Lamar Alexander","Thad Cochran","Pat Roberts"],
+    datasets : [
+      {
+
+        fillColor : "rgba(189,203,216,0.5)",
+        strokeColor : "rgba(220,220,220,0.8)",
+        highlightFill: "rgba(170,183,191,0.75)",
+        highlightStroke: "rgba(220,220,220,1)",
+        data : [18,17.5,12.4,8.5,7.3,6.6,6.4]
+      }
+  ]
+
+};
+
+var myBarChart = new Chart(ctx2).Bar(barChartData);
+
+})();
+
+</script>
+
+

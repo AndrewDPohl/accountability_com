@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>accountablity</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'autocomplete-rails.js' %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Accountability Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/senators">Senators</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bills <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/bills">Recently Introduced Bills</a></li>
+            <li><a href="/bills/passed_bills">Recently Passed Bills</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% unless current_user %>
+          <li><a href="/login">Sign In</a></li>
+          <li><a href="/sign_up">Sign Up<span class="sr-only">(current)</span></a></li>
+        <% else %>
+          <li><a href="#">Hello, <%= current_user.first_name %></a></li>
+          <li><a href="/watchlist">Watchlist</a></li>
+          <li><a href="/logout">Logout</a></li>
+        <% end %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<!-- End of Navigation -->
+
+<%= yield %>
+
+<!-- Start of FOOTER -->
+<footer class="footer">
+  <div class="row">
+
+    <div class="col-sm-6">
+      <h4>Senator Accountablity Project</h4>
+      <div id= "developed_by">
+        <a href="/about">About Us</a><br>
+        Developed by Samuel F. Cabral, Andrew D. Pohl, Sandra Stark
+      </div>
+    </div>
+
+    <div id="disclosure" class="col-sm-6">
+      This is not a government website nor is it sponsored by any government agency.
+      Information provided through GovTrack.us API, and the New York Times Congress API.
+      We do not endorse any specific Senators, Political Parties, or Bills.
+    </div>
+
+  </div> 
+</footer>
+
+<!-- /footer> -->
+
+</body>
+</html>
