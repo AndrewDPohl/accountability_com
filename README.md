@@ -1,16 +1,19 @@
-# accountability_com
-# Senator Accountability Project 
-# Created by Samuel F. Cabral, Andrew D. Pohl and Sandra Stark.
+# <h1>accountability_com</h1>
+#<p> Senator Accountability Project </p>
+#<p>Created by Samuel F. Cabral, Andrew D. Pohl and Sandra Stark.</p>
 
-# The live project can be found HERE.
-# A Trello board showcasing the project outline can be found HERE.
+#<p> The live project can be found HERE.</p>
+#<p>A Trello board showcasing the project outline can be found HERE.</p>
 
 
 #<h2>Elevator Pitch</h2>
-#<p>  </p>
+#<p>App will provide information on US senators which is vital to creating accountability while in office.  </p>
 
 
 #<h2>MVP</h2>
+<p>Create a site which will render current Senators in the US Congress using GovTrack.us and Sunlightlabs APIs. Users will be able to create accounts and save senators to "watch lists" to follow their careers.</p>
+
+<p>Information for each Senator will include first and last name, birthday, gender, political party, job title, state they represent, senator rank, phone, start date, end date, website, govtrack link, twitter handle and YouTube id.</p>
 
 
 #<h2>APIs Used</h2>
