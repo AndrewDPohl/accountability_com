@@ -41,10 +41,6 @@ p{
   margin-right:5em;
 }
 
-#about_content{
-  // background-color:#F8F8F8;
-  height: 50em;
-}
 
 #senator_container{
  
@@ -95,26 +91,17 @@ p{
     float: left;
   }
 
-   h3 {
-    text-align:center;
-    font-family: 'Lato', sans-serif;
-  }
-
   .bill_title {
   text-align: left;
   }
 
-  footer {
-    clear: both;
-  }
-
-@media screen and (max-width: 1400px) {
-    .container_bar {
-        float: left;
-    }
+footer {
+  margin-top: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
-
-
 
   
 
