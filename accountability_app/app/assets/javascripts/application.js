@@ -12,5 +12,29 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require chart.js
+//= require chart.min.js
 //= require turbolinks
 //= require_tree .
+//= require bootstrap.min
+//= require jquery-ui
+//= require autocomplete-rails
+
+
+
+$(document).ready(function () {
+  var $billsCon = $("#bills_con")
+
+  @@NYT_bills_url || = ENV["NYT_bills_url"
+
+  $.getJSON(@@NYT_bills_url, function (json) {
+    var billdata = JSON.parse(response.body);
+    var bill = billdata['results'][0]['bills'];
+    console.log(bill);
+    bill.forEach(function (bill){
+    $('#billsCon').append('<li>bill["title]</li>');
+
+  });
+});
+
+

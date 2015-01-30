@@ -1,17 +1,30 @@
 class SenatorsController < ApplicationController
+
   def index
+    @senators = Senator.all
+    render :index
   end
 
   def show
+    @senator = Senator.find(params[:id])
+    @votes = @senator.showvotes
+    render :show
   end
 
   def new
   end
 
-  # def create
-    # new_senator = params.require(:senator).permit(:first_name, :last_name, :date_of_birth, :gender, :political_party, :job_title, :state, :rank, :phone, :start_date, :end_date, :website, :link_to_gov, :twitter_handle, :youtube_id, :cspan_id, :pvsid, :osid)
-    # senator = 
-
   def edit
+  end
+
+  def search
+    first_name, last_name = params["senator_name"].split(" ")
+    @senator = Senator.where("first_name ilike ? and last_name ilike ?", "#{first_name}%", "#{last_name}%").first
+    if @senator
+      redirect_to @senator
+    else
+      flash[:error] = "SENATOR NOT FOUND"
+      redirect_to senators_path
+    end
   end
 end

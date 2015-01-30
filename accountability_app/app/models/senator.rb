@@ -1,42 +1,37 @@
 class Senator < ActiveRecord::Base
   belongs_to :watchlists
+  
+  def showvotes
+    response = Typhoeus.get(ENV['NYT_voter_data1'] + self[:bioguideid] + ENV['NYT_voter_data2'])
 
-  # def create_senators
-  #   request = Request.new(
-  #     'https://www.govtrack.us/api/v2/role?current=true',
-  #     method: :get,
-  #     params: {
-  #       first_name: self.content,
-  #       last_name: self.content,
-  #       date_of_birth: self.content,
-  #       gender: self.content,
-  #       political_party: self.content,
-  #       job_title: self.content,
-  #       state: self.content,
-  #       rank: self.content,
-  #       phone: self.content,
-  #       start_date: self.content,
-  #       end_date: self.content,
-  #       website: self.content,
-  #       link_to_gov: self.content,
-  #       twitter_handle: self.content,
-  #       youtube_id: self.content,
-  #       cspan_id: self.content,
-  #       pvsid: self.content,
-  #       osid: self.content,
-  #       outputMode: 'json', }
-  #       )
-  #   # run the API call
-  #   request.run
-  #   # get a response
-  #   response = request.response
-  #   # parse the data and name it
-  #   senators = JSON.parse(response.body)
-  #   # define what a single senator is
-  #   senator = senators['senator']
-  #   # run a create method to push to the database
-  #   senators.each do |senator|
-  #       senator.create(senator)
-  #   end
-  #   puts senators
+    voter_data = JSON.parse(response.body)
+
+    votes = voter_data["results"]
+
+    votes.map do |votes|
+      {
+        most_recent_vote: votes["most_recent_vote"],
+        bills_sponsored: votes["roles"][0]["bills_sponsored"],
+        bills_cosponsored: votes["roles"][0]["bills_cosponsored"],
+        missed_votes_pct: votes["roles"][0]["missed_votes_pct"],
+        votes_with_party_pct: votes["roles"][0]["votes_with_party_pct"]
+      }
+    end
+  end
+
+  def showpics
+    senpics = "http://theunitedstates.io/images/congress/450x550/#{bioguideid}.jpg"
+  end
+
+  def showflag
+    senflag = "http://www.50states.com/images/redesign/flags/#{state}-smallflag.png"
+  end
+
+  def showstate
+    senstate = "https://raw.githubusercontent.com/TheJasonHorsley/state-map/master/stateImages/#{full_state_name}.png"
+  end
+
+
+
+
 end

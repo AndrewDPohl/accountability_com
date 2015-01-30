@@ -1,0 +1,29 @@
+<div class="container">
+<h1>Latest Bills in Senate</h1>
+<p>Find the latest bills to be introduced in the Senate</p>
+<br>
+
+
+<% @bills.each do |bill| %>
+  <div>
+    <h3 class="bill_title">Title: <%= bill[:title] %></h3>
+  </div> 
+  <div>
+    <p>Bill Number: <%= bill[:number] %> </p>
+  </div>
+  <div>
+    <p>Introduced on: <%= bill[:introduced_date] %> </p>
+  </div>
+  <div>
+    <p>Committees: <%= bill[:committees] %> </p>
+  </div>
+  <div>
+    <p>Latest Action Date: <%= bill[:latest_major_action_date] %></p>
+  </div>
+  <div>
+    <p>Latest Major Action: <%= bill[:latest_major_action] %></p>
+  </div>
+  <br>
+  <br>
+<% end %>
+</div>

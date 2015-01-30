@@ -1,15 +1,24 @@
+<div class="container" div align="center">
 <h1>Sign In</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
 
+<div class="form_container">
 <%= form_for :user, url: login_path, method: "post" do |f| %>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
+ <div class="form-group text-center col-md-offset-2 col-md-8">
+    <%= f.text_field :email, placeholder: "Email", class: "form-control input-sm", autofocus: true %>
   </div>
-  <br>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
+  
+  <div class="form-group text-center col-md-offset-2 col-md-8">
+     <%= f.password_field :password, placeholder: "Password", class: "form-control input-sm" %>
   </div>
-  <br>
-  <%= f.submit %>
+  
+  <div class="">
+  <%= f.submit "Login", class: "btn btn-md btn-primary form-group col-md-offset-4 col-md-4" %><br/>
+  </div>
 
 <% end %>
+</form>
+</div>
+</div>
+</div>
+
+

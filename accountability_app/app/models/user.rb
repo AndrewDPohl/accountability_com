@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :watchlists
+  has_one :watchlist
 
   has_secure_password
 

@@ -1,33 +1,43 @@
+<div class="container" div align="center">
 <h1>Sign Up</h1>
-  <h5>PLEASE NOTE: Passwords must be at least eight characters long and must contain lower <strong>AND</strong> upper case letters.</h5>
-
+  <h5>PLEASE NOTE: Passwords must be at least eight characters long <br> and must contain lower <strong>AND</strong> upper case letters.</h5>
+  <div class="form_container">
   <%= form_for @user do |f| %>
+    <% if flash[:error] %>
+      <div class="alert_message">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: name %>
+        <% end %>
+      </div>
+    <% end %>
       <br>
-      <div>
-        <%= f.text_field :email, placeholder:"Email" %>
+      <div class="form-group text-center col-md-offset-2 col-md-8">
+        <%= f.text_field :email, placeholder:"Email", class: "form-control input-sm", autofocus: true %>
       </div>
       <br>
-      <div>
-        <%= f.text_field :email_confirmation, placeholder: "Email Confirmation" %>
+      <div class="form-group text-center col-md-offset-2 col-md-8">
+        <%= f.text_field :email_confirmation, placeholder: "Email Confirmation", class: "form-control input-sm", autofocus: true %>
       </div>
       <br>
-      <div>
-        <%= f.password_field :password, placeholder:"Password" %>
+      <div class="form-group text-center col-md-offset-2 col-md-8">
+        <%= f.password_field :password, placeholder:"Password", class: "form-control input-sm", autofocus: true %>
       </div>
       <br>
-      <div>
-        <%= f.password_field :password_confirmation, placeholder:"Confirm Password" %>
+      <div class="form-group text-center col-md-offset-2 col-md-8">
+        <%= f.password_field :password_confirmation, placeholder:"Confirm Password", class: "form-control input-sm", autofocus: true %>
       </div>
       <br>
-      <div>
-        <%= f.text_field :first_name, placeholder: "First Name" %>
+      <div class="form-group text-center col-md-offset-2 col-md-8">
+        <%= f.text_field :first_name, placeholder: "First Name", class: "form-control input-sm", autofocus: true %>
       </div>
       <br>
-      <div>
-        <%= f.text_field :last_name, placeholder: "Last Name" %>
+      <div class="form-group text-center col-md-offset-2 col-md-8">
+        <%= f.text_field :last_name, placeholder: "Last Name",class: "form-control input-sm", autofocus: true %>
       </div>
       <br>
-      <div>
-        <%= f.submit %>
-      </div>
+      <div class="">
+        <%= f.submit "Sign Up", class: "btn btn-md btn-primary form-group col-md-offset-4 col-md-4" %><br/>
+  </div>
   <% end %>
+</div>
+</div>

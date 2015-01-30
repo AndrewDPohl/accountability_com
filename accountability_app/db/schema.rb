@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124184256) do
+ActiveRecord::Schema.define(version: 20150129185931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bills", force: :cascade do |t|
+    t.json     "latest_bills"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "senators", force: :cascade do |t|
     t.string   "first_name"
@@ -37,6 +43,9 @@ ActiveRecord::Schema.define(version: 20150124184256) do
     t.string   "osid"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "bioguideid"
+    t.integer  "watchlist_id"
+    t.string   "full_state_name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150124184256) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
 end

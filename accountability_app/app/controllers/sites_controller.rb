@@ -1,5 +1,7 @@
 class SitesController < ApplicationController
   def index
+    @senators = Senator.all 
+    render :index
   end
 
   def about
