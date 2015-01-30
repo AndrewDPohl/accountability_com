@@ -53,11 +53,6 @@
 </nav>
 <!-- End of Navigation -->
 
-<div class="alert_message">
-    <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-    <% end -%>
-</div>
 <%= yield %>
 
 
