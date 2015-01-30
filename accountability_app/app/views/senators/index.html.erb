@@ -112,17 +112,23 @@
     });
   });
   </script>
- 
-<div class="form-group">
-  <%= form_for :senator, url: "/search", method: :get do |f| %>
-    <label for="senators">Choose A Senator: </label>
-    <input id="senators" name="senator_name">
-  <% end %>
-
-</div>
 
 <div class='senator container'>
   <h1>Find your senator</h1>
+
+  <div class="senator-form">
+  <%= form_for :senator, url: "/search", method: :get do |f| %>
+    <label for="senators">Search For A Senator: </label>
+    <input id="senators" name="senator_name">
+    <%= f.submit "Search" %>
+     <div class="alert_message">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: name %>
+        <% end %>
+      </div>
+  <% end %>
+  </div>
+
     <% @senators.order(:state).each_with_index do | senator, index | %>
       <% if index == 0 || index == 25 || index == 50 || index == 75  %>
         <div class="col-md-3">
