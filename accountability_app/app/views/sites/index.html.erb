@@ -1,35 +1,32 @@
-
 <div id= "index_container"> 
   <div id="index_banner" class= "index_bannerClass"> 
     <div id="banner_text"> 
       <br>  
       <h1>Senator Accountablity Project </h1>
-      <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id eleifend nisi. Pellentesque semper, urna a vulputate scelerisque, mi purus dapibus nisi, id eleifend urna ex eget ligula. Vivamus ultricies nulla tortor, ac lacinia urna malesuada ut. Nulla tincidunt egestas nisi non pellentesque. Mauris sollicitudin, eros ac auctor porta, ex orci tincidunt erat, vitae tempus enim nunc nec sapien.</p>
+      <P>The goal of this project is to provide current and relevant information on every member of the United States Senate. We provide up-to-date information on bills being passed through the Senate, as well as, voting records for each Senator. Our mission is to help voters be more informed.</p>
     </div>
   </div>
 
   <div id="senate_graph" div align="center">
     <%= image_tag("senate_seats02.png") %>
   </div>
-  
-<!-- <div class="container" id= "charts">
-    <div class="container_pie col-sm-6">
-        <canvas id="canvas" height="425" width="600"></canvas>
-      </div>
-      <div class="container_bar col-sm-6">
-        <h3> 2014 Campaign Financing Chart In Millions </h3>
-        <canvas id="campaign_chart" height="450" width="600" ></canvas>
-    </div>
-</div> -->
 
+<div class="container">
 <!-- resposive -->
+<div class="row">
+  <div class="senator_vote_container col-sm-6">
     <div class="canvas" style="top:400";>
+        <h4 class="noBoot"> Men vs. Women Ratio </h4>
         <canvas id="canvas" height="425" width="600"></canvas>
-      </div>
-      <div class="campaign_chart">
-        <h3 class="noBoot"> 2014 Campaign Financing Chart In Millions </h3>
-        <canvas id="campaign_chart" height="450" width="600" ></canvas>
     </div>
+  </div>
+  <div class="senator_vote_container col-sm-6">
+    <div class="campaign_chart">
+      <h4 class="noBoot"> 2014 Campaign Financing Chart In Millions </h4>
+      <canvas id="campaign_chart" height="450" width="600" ></canvas>    
+    </div>
+  </div>
+</div>
 </div>
 
 

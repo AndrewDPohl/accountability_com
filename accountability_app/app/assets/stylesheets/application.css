@@ -19,15 +19,7 @@
   background-color: blue;
 }
  
- .footer{
- 	padding-top:10px;
- 	font-family: 'Lato', sans-serif;
- 	background: #BACBD9;
- }
 
- #text-muted {
- 	size: 1px;
- }
 .flag {
   border: 2px solid black;
 }
@@ -59,3 +51,6 @@
   padding-top: 10px;
  }
 
+#disclosure {
+  padding-left: 100px;
+}
