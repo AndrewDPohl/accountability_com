@@ -1,7 +1,7 @@
 #<h1> Senator Accountability Project </h1>
 #<p>Created by Samuel F. Cabral, Andrew D. Pohl and Sandra Stark.</p>
 
-#<p> The live project can be found HERE.</p>
+#<p> The live project can be found <a href="https://accountabilityproject.herokuapp.com/">HERE.</a></p>
 #<p>A Trello board showcasing the project outline can be found HERE.</p>
 
 
