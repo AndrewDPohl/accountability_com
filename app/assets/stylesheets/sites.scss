@@ -50,10 +50,18 @@ p{
   color:red;
 }
 
+.republican a:hover{
+  color: #857872;
+}
 
 .democrat, .democrat a {
   color:blue;
 }
+
+.democrat a:hover{
+  color:#857872;
+}
+
 
 .independent, .independent a {
     color: #FFCC00;
@@ -101,6 +109,7 @@ footer {
   padding-right: 150px;
   padding-bottom: 25px;
   padding-top: 25px;
+  background: #BACBD9;
 }
 
   
