@@ -1,17 +1,13 @@
 <div class="container">
-
+<div class= "watchlist">
 <h1>Watchlist</h1>
 <br>
-
-<% @watchlist.senators.each do |senator| %>
-  <div><h2><%= link_to senator.first_name + " " + senator.last_name, senator_path(senator) %></h2></div>
-<% end %>
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-
-
+	<%if (@watchlist == nil) %>
+		<h3> Search for Senators to add to your watchlist <a href= "/senators">here</a></h3>
+	<%else%> 
+		<%@watchlist.senators.each do |senator| %>
+	<div><h2 class='senator_name_index <%= senator.political_party.downcase %>'><%= link_to senator.first_name + " " + senator.last_name, senator_path(senator) %></h2></div>
+	<% end %>
+<%end%>
+</div>
 </div>
