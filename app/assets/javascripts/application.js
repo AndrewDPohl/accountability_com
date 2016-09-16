@@ -25,7 +25,7 @@
 $(document).ready(function () {
   var $billsCon = $("#bills_con")
 
-  @@NYT_bills_url || = ENV["NYT_bills_url"
+  @@NYT_bills_url || = ENV["NYT_bills_url"]
 
   $.getJSON(@@NYT_bills_url, function (json) {
     var billdata = JSON.parse(response.body);

@@ -5,6 +5,7 @@ class Bill < ActiveRecord::Base
 
     bills = bill_data["results"][0]["bills"]
 
+
     bills.map do |bills|
       {
         title: bills["title"],

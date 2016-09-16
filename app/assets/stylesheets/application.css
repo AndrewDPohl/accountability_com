@@ -43,14 +43,21 @@
 .stat {
   text-align: center;
 }
- .senator_vote_container {
-  padding-top: 10px;
- }
 
- .senator_bills_container {
+.senator_vote_container {
   padding-top: 10px;
- }
+}
+
+.senator_bills_container {
+  padding-top: 10px;
+}
+
+#about {
+  margin-bottom: 25px;
+}
 
 #disclosure {
-  padding-left: 100px;
+  padding: 15px;
 }
+
+
