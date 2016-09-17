@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+PP// This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -25,7 +25,7 @@
 $(document).ready(function () {
   var $billsCon = $("#bills_con")
 
-  @@NYT_bills_url || = ENV["NYT_bills_url"]
+  @@PP_bills_url || = ENV["PP_bills_url"]
 
   $.getJSON(@@NYT_bills_url, function (json) {
     var billdata = JSON.parse(response.body);

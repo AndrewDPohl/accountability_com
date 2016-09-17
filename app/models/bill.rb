@@ -1,6 +1,6 @@
 class Bill < ActiveRecord::Base
   def self.showbills
-    response = Typhoeus.get(ENV['NYT_bills_url'])
+    response = Typhoeus.get(ENV['PP_bills_url'])
     bill_data = JSON.parse(response.body)
 
     bills = bill_data["results"][0]["bills"]

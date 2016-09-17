@@ -2,7 +2,7 @@ class Senator < ActiveRecord::Base
   belongs_to :watchlists
   
   def showvotes
-    response = Typhoeus.get(ENV['NYT_voter_data1'] + self[:bioguideid] + ENV['NYT_voter_data2'])
+    response = Typhoeus.get(ENV['PP_voter_data1'] + self[:bioguideid] + ENV['PP_voter_data2'])
 
     voter_data = JSON.parse(response.body)
 
