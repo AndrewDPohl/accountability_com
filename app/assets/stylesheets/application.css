@@ -27,14 +27,14 @@
 .ytd_stats {
   background-color: #2B5992;
   color: white;
-  width: 450px;
+  width: 350px;
   text-align: center;
   border-radius: 10px;
 }
 
 .ytd_stat {
   color: #2B5992;
-  width: 425;
+  width: 350px;
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
@@ -75,11 +75,19 @@
   text-transform: uppercase;
 }
 
-.bill-info {
+.bill-title {
   font-weight: bold;
 }
 
 .unique-bill {
   border-bottom: 2px solid black;
   margin-bottom: 20px;
+}
+
+.senator-photo {
+  max-width: 350px;
+}
+
+.senator-photo, .senator_state_flag {
+  padding-top: 25px;
 }

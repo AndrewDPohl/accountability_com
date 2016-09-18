@@ -5,22 +5,22 @@
     <% @bills.each do |bill| %>
     <div class="unique-bill">
       <div>
-        <h3 class="bill-info">Title:&nbsp;&nbsp;<%= bill[:title] %></h3>
+        <h3 class="bill-info"><span class="bill-title">Title:</span>&nbsp;&nbsp;<%= bill[:title] %></h3>
       </div> 
       <div>
-        <p class="bill-info">Bill Number:&nbsp;&nbsp;<%= bill[:number] %></p>
+        <p class="bill-info"><span class="bill-title">Bill Number:</span>&nbsp;&nbsp;<%= bill[:number] %></p>
       </div>
       <div>
-        <p class="bill-info">Introduced on:&nbsp;&nbsp;<%= bill[:introduced_date] %> </p>
+        <p class="bill-info"><span class="bill-title">Introduced on:</span>&nbsp;&nbsp;<%= bill[:introduced_date] %> </p>
       </div>
       <div>
-        <p class="bill-info">Committees:&nbsp;&nbsp;<%= bill[:committees] %> </p>
+        <p class="bill-info"><span class="bill-title">Committees:</span>&nbsp;&nbsp;<%= bill[:committees] %> </p>
       </div>
       <div>
-        <p class="bill-info">Latest Action Date:&nbsp;&nbsp;<%= bill[:latest_major_action_date] %></p>
+        <p class="bill-info"><span class="bill-title">Latest Action Date:</span>&nbsp;&nbsp;<%= bill[:latest_major_action_date] %></p>
       </div>
       <div>
-        <p class="bill-info">Latest Major Action:&nbsp;&nbsp;<%= bill[:latest_major_action] %></p>
+        <p class="bill-info"><span class="bill-title">Latest Major Action:</span>&nbsp;&nbsp;<%= bill[:latest_major_action] %></p>
       </div>
       <br>
     </div>
