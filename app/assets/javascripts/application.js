@@ -22,19 +22,19 @@
 
 
 
-$(document).ready(function () {
-  var $billsCon = $("#bills_con")
+// $(document).ready(function () {
+//   var $billsCon = $("#bills_con")
 
-  @@PP_bills_url || = ENV["PP_bills_url"]
+//   @@PP_bills_url || = ENV["PP_bills_url"]
 
-  $.getJSON(@@PP_bills_url, function (json) {
-    var billdata = JSON.parse(response.body);
-    var bill = billdata['results'][0]['bills'];
-    console.log(bill);
-    bill.forEach(function (bill){
-    $('#billsCon').append('<li>bill["title]</li>');
+//   $.getJSON(@@PP_bills_url, function (json) {
+//     var billdata = JSON.parse(response.body);
+//     var bill = billdata['results'][0]['bills'];
+//     console.log(bill);
+//     bill.forEach(function (bill){
+//     $('#billsCon').append('<li>bill["title]</li>');
 
-  });
-});
+//   });
+// });
 
 

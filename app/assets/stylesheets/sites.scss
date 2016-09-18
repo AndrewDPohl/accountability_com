@@ -2,39 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#index_banner{
-  height:20em;
-  width:100%;
-  background-color:#2B5992;
+#index_banner {
+  min-height: 20em;
+  width: 100%;
+  background-color: #2B5992;
   color:white;
   margin-top: -20px;
+  text-align: center;
 }
 
-.senator_name_index{
+.senator_name_index {
   margin-top: 2em;
 }
 
-#banner_text{
+#banner_text {
   font-family: 'Lato', sans-serif;
-  margin-left: 5em;
-  margin-right:5em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
-p{
+p {
   font-size: 1.5em;
 }
 
-#senate_graph{
+#senate_graph {
   margin-top: 1em;
   background-image: url("senate_seats02.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 500px;
+  height: 600px;
   max-width: 100%;
 }
 
-#about_banner{
+#about_banner {
   height:8em;
   width:100%;
   background-color:#2B5992;
@@ -42,7 +43,7 @@ p{
   margin-top: -20px;
 }
 
-#about_text{
+#about_text {
   font-family: 'Lato', sans-serif;
   margin-left: 5em;
   margin-right:5em;
@@ -52,7 +53,7 @@ p{
   color:red;
 }
 
-.republican a:hover{
+.republican a:hover {
   color: #857872;
 }
 
@@ -60,13 +61,13 @@ p{
   color:blue;
 }
 
-.democrat a:hover{
+.democrat a:hover {
   color:#857872;
 }
 
 
 .independent, .independent a {
-    color: #FFCC00;
+  color: #FFCC00;
 }
 /* #charts {
     margin-top: 1em;
@@ -84,26 +85,24 @@ p{
 */
  /* }*/
 
-  .container_bar{
-    margin-left: 500px;
-    margin-top: -500px;
-    right: 100px;
-    margin-right: 150px;
-    padding-left: 50px;
-    padding-bottom: 8em;
-  }
-  
-  #canvas {
-    float: left;
-  }
-  
-  .campaign_chart {
-    float: left;
-  }
+.container_bar {
+  margin-left: 500px;
+  margin-top: -500px;
+  right: 100px;
+  margin-right: 150px;
+  padding-left: 50px;
+  padding-bottom: 8em;
+}
 
-  .bill_title {
-  text-align: left;
-  }
+#canvas, .campaign_chart {
+  display: inline-block;
+}
+
+.senator_vote_container {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
 
 footer {
   margin-top: 50px;
@@ -118,15 +117,11 @@ footer {
   font-size: 25px;
 }
 
-  
-
-  
-
-
-
-
- 
-
+@media (max-width: 460px) {
+  #senate_graph {
+    height: 300px;
+  }
+}
 
 
 

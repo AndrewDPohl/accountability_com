@@ -9,7 +9,6 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
 
@@ -43,7 +42,7 @@
           <li><a href="/login">Sign In</a></li>
           <li><a href="/sign_up">Sign Up<span class="sr-only">(current)</span></a></li>
         <% else %>
-          <li><a href="#">Hello, <%= current_user.first_name %></a></li>
+          <li><a href="#">Hello,&nbsp;&nbsp;<%= current_user.first_name %></a></li>
           <li><a href="/watchlist">Watchlist</a></li>
           <li><a href="/logout">Logout</a></li>
         <% end %>

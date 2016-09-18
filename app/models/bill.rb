@@ -1,6 +1,11 @@
 class Bill < ActiveRecord::Base
   def self.showbills
-    response = Typhoeus.get(ENV['PP_bills_url'])
+    # response = Typhoeus.get(ENV['PP_bills_url'])
+    response = Typhoeus.get(
+      "https://api.propublica.org/congress/v1/114/senate/bills/introduced.json",
+      headers: { 'X-API-Key' => "7dwgrzlg3i2NENHUYdHRNpmki65o1f86gKLVcz75" }
+    )
+    
     bill_data = JSON.parse(response.body)
 
     bills = bill_data["results"][0]["bills"]
@@ -19,8 +24,13 @@ class Bill < ActiveRecord::Base
   end  
 
   def self.passed_bills
-    response1 = Typhoeus.get(ENV['PASSED_BILLS']) 
-    passed_bill_data = JSON.parse(response1.body)
+    # response1 = Typhoeus.get(ENV['PASSED_BILLS']) 
+    response = Typhoeus.get(
+      "https://api.propublica.org/congress/v1/114/house/bills/introduced.json",
+      headers: { 'X-API-Key' => "7dwgrzlg3i2NENHUYdHRNpmki65o1f86gKLVcz75" }
+    )
+
+    passed_bill_data = JSON.parse(response.body)
 
     passed_bills = passed_bill_data["results"][0]["bills"]
 

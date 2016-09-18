@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .watchlist{
-	padding-bottom: 200px;
+	min-height: 350px;
+}
+
+.watchlist-title, .watchlist-info {
+  text-align: center;
+  text-transform: uppercase;
 }
 

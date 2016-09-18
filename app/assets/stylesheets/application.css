@@ -60,4 +60,26 @@
   padding: 15px;
 }
 
+.showstate {
+  height: 300px;
+  width: 200px;
+  padding-right: 20px;
+}
 
+.latest-bills {
+  display: inline-block;
+}
+
+.bills-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bill-info {
+  font-weight: bold;
+}
+
+.unique-bill {
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}

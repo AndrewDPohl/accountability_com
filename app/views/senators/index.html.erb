@@ -115,29 +115,29 @@
 <div class='senator container'>
 
     <div class="senator-form">
-        <h1>Find your senator</h1>
+        <h1>FIND YOUR SENATOR</h1>
+        <p><span class="red">RED</span> = Republican, <span class="blue">BLUE</span> = Democrat, <span class="yellow">YELLOW</span> = Independent</p>
         <%= form_for :senator, url: "/search", method: :get do |f| %>
-        <!-- <label for="senators">Search For A Senator: </label> -->
-        <input id="senators" name="senator_name" placeholder="Search For A Senator">
-        <%= f.submit "Search" %>
+            <input id="senators" name="senator_name" placeholder="Search For A Senator">
+            <%= f.submit "Search" %>
+        <% end %>
     </div>
     <div class="alert_message">
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, class: name %>
         <% end %>
     </div>
-    <% end %>
     
     <% @senators.order(:state).each_with_index do | senator, index | %>
       <% if index == 0 || index == 25 || index == 50 || index == 75  %>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ind-senator">
       <% end %>
-      <h4 class='senator_name_index <%= senator.political_party.downcase %>'> <%= link_to senator.first_name + " " + senator.last_name, senator_path(senator)%></h4>
+      <h4 class='name senator_name_index <%= senator.political_party.downcase %>'> <%= link_to senator.first_name + " " + senator.last_name, senator_path(senator)%></h4>
       <h4 class='senator_state_index <%= senator.political_party.downcase %>'><%= senator.state%></h4>
       <% if index == 24 || index == 49 || index == 74 || index == 99 %>
         </div>
       <% end %>
 
-     <% end %>
+    <% end %>
 
 </div>

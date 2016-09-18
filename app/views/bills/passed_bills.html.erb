@@ -1,27 +1,28 @@
 <div class="container">
-<h1>Recently passed bills</h1>
-<p>Find the latest bills to have passed in the Senate</p>
+  <h1 class="bills-title">Latest Bills Passed by the United State Senate</h1>
 <br>
 
-
-<% @passed_bills.each do |bill| %>
-  <div>
-    <h3 class="bill_title">Title: <%= bill[:title] %></h3>
-  </div> 
-  <div>
-    <p>Bill Number: <%= bill[:number] %> </p>
+  <div class="passed-bills">
+    <% @passed_bills.each do |bill| %>
+    <div class="unique-bill">
+      <div>
+        <h3 class="bill-info">Title: <%= bill[:title] %></h3>
+      </div> 
+      <div>
+        <p class="bill-info">Bill Number: <%= bill[:number] %> </p>
+      </div>
+      <div>
+        <p class="bill-info">Introduced on: <%= bill[:introduced_date] %> </p>
+      </div>
+      <div>
+        <p class="bill-info">Latest Action Date: <%= bill[:latest_major_action_date] %></p>
+      </div>
+      <div>
+        <p class="bill-info">Latest Major Action: <%= bill[:latest_major_action] %></p>
+      </div>
+      <br>
+    </div>
+    <% end %>
   </div>
-  <div>
-    <p>Introduced on: <%= bill[:introduced_date] %> </p>
-  </div>
-  <div>
-    <p>Latest Action Date: <%= bill[:latest_major_action_date] %></p>
-  </div>
-  <div>
-    <p>Latest Major Action: <%= bill[:latest_major_action] %></p>
-  </div>
-  <br>
-  <br>
-<% end %>
 
 </div>

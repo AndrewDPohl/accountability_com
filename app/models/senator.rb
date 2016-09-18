@@ -2,7 +2,11 @@ class Senator < ActiveRecord::Base
   belongs_to :watchlists
   
   def showvotes
-    response = Typhoeus.get(ENV['PP_voter_data1'] + self[:bioguideid] + ENV['PP_voter_data2'])
+    # response = Typhoeus.get(ENV['PP_voter_data1'] + self[:bioguideid] + ENV['PP_voter_data2'])
+    response = Typhoeus.get(
+      "https://api.propublica.org/congress/v1/members/" + self[:bioguideid] + ".json",
+      headers: { 'X-API-Key' => "7dwgrzlg3i2NENHUYdHRNpmki65o1f86gKLVcz75" }
+    )
 
     voter_data = JSON.parse(response.body)
 
@@ -28,7 +32,9 @@ class Senator < ActiveRecord::Base
   end
 
   def showstate
-    senstate = "https://raw.githubusercontent.com/TheJasonHorsley/state-map/master/stateImages/#{full_state_name}.png"
+    state = self[:full_state_name].downcase
+    # senstate = "https://raw.githubusercontent.com/TheJasonHorsley/state-map/master/stateImages/#{full_state_name}.png"
+    senstate = "http://www.50states.com/maps/#{state}.gif"
   end
 
 
