@@ -1,7 +1,7 @@
 class Bill < ActiveRecord::Base
   def self.showbills
     response = Typhoeus.get(
-      "https://api.propublica.org/congress/v1/114/senate/bills/introduced.json",
+      "https://api.propublica.org/congress/v1/115/senate/bills/introduced.json",
       headers: { 'X-API-Key' => "7dwgrzlg3i2NENHUYdHRNpmki65o1f86gKLVcz75" }
     )
     
@@ -24,7 +24,7 @@ class Bill < ActiveRecord::Base
 
   def self.passed_bills
     response = Typhoeus.get(
-      "https://api.propublica.org/congress/v1/114/house/bills/introduced.json",
+      "https://api.propublica.org/congress/v1/115/house/bills/introduced.json",
       headers: { 'X-API-Key' => "7dwgrzlg3i2NENHUYdHRNpmki65o1f86gKLVcz75" }
     )
 
