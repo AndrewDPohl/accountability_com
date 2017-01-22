@@ -1,12 +1,7 @@
-#<h1> Senator Accountability Project </h1>
+#<h3> Senator Accountability Project </h3>
 #<p>Created by Samuel F. Cabral, Andrew D. Pohl and Sandra Stark.</p>
 
-#<p> The live project can be found <a href="https://accountabilityproject.herokuapp.com/">HERE.</a></p>
-#<p>A Trello board showcasing the project outline can be found <a href="https://trello.com/b/l6EBsHJk/accountability-project-2">HERE.</a></p>
-
-
-#<h2>Elevator Pitch</h2>
-#<p>App will provide information on US senators which is vital to creating accountability while in office.  </p>
+#<p> The live project can be found <a href="https://senatoraccountability.herokuapp.com/">HERE.</a></p>
 
 
 #<h2>MVP</h2>
